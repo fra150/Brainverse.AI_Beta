@@ -1,0 +1,197 @@
+/*
+   SaasX Theme Responsive Design
+*/
+@media (max-width: 1200px) {
+    .contant-img{
+        left: -285px;
+    }
+}
+@media (max-width: 1024px) {
+    .hero-content h2{
+        font-size: 36px;
+        line-height: 46px;
+    }
+    .contant-img{
+        height: 500px;
+        left: -450px;
+    }
+    .content-item {
+        padding-left: 0;
+    }
+}
+
+/* ---- Start of max-width 992px CSS ---- */
+@media (max-width: 992px){
+    .sm-padding{ padding: 15px; }
+    .header-section .navbar-brand {
+        height: 80px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+    .js .mainmenu { display: none; }
+    .menubar {display: none;}
+    .js .slicknav_menu{ display: block; }
+    .header-btn a { margin-right: 50px; }
+    .hero-content h2{
+        font-size: 36px;
+        line-height: 36px;
+    }
+    .content-item{padding-bottom: 15px;}
+    .error-content .error-info{ padding-left: 10px; }
+    .sidebar-wrap {
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .about-wrap {
+        gap:30px
+    }
+
+    .row-feature {
+        gap: 30px;
+    }
+}
+/* ---- End of max-width 992px CSS ---- */
+
+
+/* ---- Start of min-width 480px and max-width 768px CSS ---- */
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+    .row-feature {
+        gap: 30px;
+    }
+	
+}
+/* ---- End of min-width 480px and max-width 768px CSS ---- */
+
+
+/* ---- Start of max-width 767px CSS ---- */
+@media all and (max-width: 767px) {
+    body, p{
+        font-size: 12px;
+        line-height: 22px;
+        text-align: left;
+    }
+    h1{ font-size: 30px; }
+    h2{ font-size: 22px; }
+    h3{ font-size: 16px; }
+    p br{ display: none; }
+    .padding{ padding: 60px 0; }
+    .xs-padding{ padding: 15px; }
+    .section-heading h2{
+        font-size: 24px;
+        line-height: 36px;
+        text-align: left;
+    }
+    .hero-section{ height: 350px; }
+    .hero-content h2{
+        font-size: 24px;
+        line-height: 36px;
+        margin: 0;
+    }
+    .feature-content { text-align: center; }
+    .feature-content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        line-height: 36px;
+        text-align: center;    
+    }
+    .feature-content .play-btn{ justify-content: center; }
+    .feature-item {
+        text-align: left;
+    }
+    .contant-section{ padding: 50px 0; }
+    .contant-item{ padding-left: 0; }
+    .page-header{ height: 250px; }
+    .page-content h2 {
+        font-size: 30px;
+        margin: 0;
+    }
+    .about-content h2{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .cta-content h2 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+    .pricing-footer a{ font-size: 10px; }
+    .error-content{ display: block; }
+    .error-content .error-info { margin-top: 40px; }
+    .error-content .error-info h2{
+        font-size: 120px;
+        line-height: 120px;
+        margin-bottom: 30px;
+    }
+    .error-content .error-info a{ display: block; }
+    .contact-form .form-group .col-sm-6:first-child{ margin-bottom: 15px; }
+    .contact-info h2{ line-height: 28px; }
+    .sidebar-wrap{ padding-left: 0; }
+    .blog-single-content h2 a{
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .blog-single-content h2{ line-height: 28px; }
+    blockquote p{ line-height: 32px; }
+    .year-bg{ width: 100%; }
+    .testimonial-section{ padding-bottom: 100px; }
+    .counter-content, 
+    .counter-section .section-heading{ text-align: left; }
+    .section-heading {
+        text-align: center;
+        /* padding: 0px 50px; */
+    }
+
+    .row-feature {
+        gap: 30px;
+    }
+}
+
+/* ---- End of max-width 767px CSS ---- */
+
+
+/* ---- Start of max-width 580px CSS ---- */
+@media all and (max-width: 580px) {
+    .pricing-box{ text-align: center; }
+    .subscribe-form{ width: 100%; }
+    .counter-wrap .col-lg-4:first-child{ margin-bottom: 50px; }
+
+    .row-content{
+        gap: 15px;
+    }
+
+    .row-feature {
+        gap: 30px;
+    }
+}
+/* ---- End of max-width 580px CSS ---- */
+
+
+/* ---- Start of max-width 420px CSS ---- */
+@media all and (max-width: 420px) {
+    .row-content{
+        gap: 15px;
+    }
+
+    .row-feature {
+        gap: 30px;
+    }
+    
+}
+/* ---- End of max-width 420px CSS ---- */
+
+
+/* ---- Start of max-width 380px CSS ---- */
+@media all and (max-width: 380px) {
+
+    .row-content{
+        gap: 15px;
+    }
+
+    .row-feature {
+        gap: 30px;
+    }
+	
+}
+/* ---- End of max-width 380px CSS ---- */
