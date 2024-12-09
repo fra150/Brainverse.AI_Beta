@@ -29,61 +29,68 @@
                         <p>Got a headline or an idea? Let our AI do the magic! Whether you're dreaming of a viral meme,
                             a captivating video, a punchy text, or a jaw-dropping image—just tell us what’s cooking in
                             your brain, and we’ll serve it hot!.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="row-feature">
-                    <div class="col-lg-12 feature-col-wrap">
-                        <div class="feature-wrap row wow fadeInLeft">
-                            <!-- Card 1 (Desktop: 6 columns, Tablet/Medium: 12 columns) -->
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 mb-4">
-                        <div class="feature-item flex-fill d-flex flex-column">
-                            <!-- <img src="../../../assets/img/icons/analytics.png"> -->
-                            <h3>Text Content</h3>
-                            <p>For when your thoughts need a megaphone! Craft articles, headlines, or quirky blurbs that
-                                hit the mark.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 mb-4" data-wow-delay="200ms">
-                        <div class="feature-item flex-fill d-flex flex-column">
-                            <!-- <img src="../../../assets/img/icons/it-consulting.png"> -->
-                            <h3>Image</h3>
-                            <p>Turn your prompts into visual masterpieces. Perfect for art lovers, creators, and
-                                visionaries.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 mb-4">
-                        <div class="feature-item flex-fill d-flex flex-column">
-                            <!-- <img src="../../../assets/img/icons/analytics.png"> -->
-                            <h3>Video</h3>
-                            <p>Lights, camera, content! Let’s turn your ideas into cinematic brilliance with just a few
-                                words.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 mb-4" data-wow-delay="200ms">
-                        <div class="feature-item flex-fill d-flex flex-column">
-                            <!-- <img src="../../../assets/img/icons/it-consulting.png"> -->
-                            <h3>Meme</h3>
-                            <p>Because the world needs more laughs! Add your prompt, and we’ll deliver a meme worth
-                                sharing.</p>
-                        </div>
+                        <p>Select type of content you would like to generate from below.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-12 padding-15">
-            <div class="contact-form">
-                <form class="form-horizontal">
+        <form [formGroup]="featureForm" (ngSubmit)="onSubmit($event)">
+            <div class="row-feature padding-15">
+                <div class="row">
+                    <div class="col-lg-3 mb-4">
+                        <a (click)="toggleContentType('text')" class="feature-item-card">
+                            <div class="feature-item flex-fill d-flex flex-column"
+                                [ngClass]="contentType === 'text' ? 'feature-item-active' : ''">
+                                <!-- <img src="../../../assets/img/icons/analytics.png"> -->
+                                <h3>Text Content</h3>
+                                <p>For when your thoughts need a megaphone! Craft articles, headlines, or quirky blurbs
+                                    that
+                                    hit the mark.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 mb-4" data-wow-delay="200ms">
+                        <a (click)="toggleContentType('image')" class="feature-item-card">
+                            <div class="feature-item flex-fill d-flex flex-column"
+                                [ngClass]="contentType === 'image' ? 'feature-item-active' : ''">
+                                <!-- <img src="../../../assets/img/icons/it-consulting.png"> -->
+                                <h3>Image</h3>
+                                <p>Turn your prompts into visual masterpieces. Perfect for art lovers, creators, and
+                                    visionaries.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 mb-4">
+                        <a (click)="toggleContentType('video')" class="feature-item-card">
+                            <div class="feature-item flex-fill d-flex flex-column"
+                                [ngClass]="contentType === 'video' ? 'feature-item-active' : ''">
+                                <!-- <img src="../../../assets/img/icons/analytics.png"> -->
+                                <h3>Video</h3>
+                                <p>Lights, camera, content! Let’s turn your ideas into cinematic brilliance with just a
+                                    few
+                                    words.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 mb-4" data-wow-delay="200ms">
+                        <a (click)="toggleContentType('meme')" class="feature-item-card">
+                            <div class="feature-item flex-fill d-flex flex-column"
+                                [ngClass]="contentType === 'meme' ? 'feature-item-active' : ''">
+                                <!-- <img src="../../../assets/img/icons/it-consulting.png"> -->
+                                <h3>Meme</h3>
+                                <p>Because the world needs more laughs! Add your prompt, and we’ll deliver a meme worth
+                                    sharing.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 padding-15">
+                <div class="contact-form">
                     <div class="form-group row">
                         <div class="col-md-12">
-                            <textarea id="message" name="message" cols="30" rows="7" class="form-control message"
+                            <textarea id="message" formControlName="message" cols="30" rows="7"
+                                class="form-control message"
                                 placeholder="Describe the story or scene you want. E.g., 'A drone delivering pizza in a futuristic city."
                                 required></textarea>
                         </div>
@@ -92,20 +99,45 @@
                         <div class="social-media-selection">
                             <p>Select the social media this post is for:</p>
                             <div class="social-media-icon">
-                                <img src="../../../assets/img/icons/icons8-linkedin (4).svg">
-                                <img src="../../../assets/img/icons/icons8-twitterx.svg">
-                                <img src="../../../assets/img/icons/icons8-instagram (4).svg">
-                                <img src="../../../assets/img/icons/icons8-youtube (1).svg">
-                                <img src="../../../assets/img/icons/icons8-medium.svg">
+                                <a (click)="toggleSocialMediaType('linkedIn')"><img
+                                        src="../../../assets/img/icons/icons8-linkedin (4).svg"
+                                        [ngClass]="socialMediaType === 'linkedIn' ? 'social-media-active' : ''"></a>
+                                <a (click)="toggleSocialMediaType('twitter')"><img
+                                        src="../../../assets/img/icons/icons8-twitterx.svg"
+                                        [ngClass]="socialMediaType === 'twitter' ? 'social-media-active' : ''"></a>
+                                <a (click)="toggleSocialMediaType('instagram')"><img
+                                        src="../../../assets/img/icons/icons8-instagram (4).svg"
+                                        [ngClass]="socialMediaType === 'instagram' ? 'social-media-active' : ''"></a>
+                                <a (click)="toggleSocialMediaType('youtube')"><img
+                                        src="../../../assets/img/icons/icons8-youtube (1).svg"
+                                        [ngClass]="socialMediaType === 'youtube' ? 'social-media-active' : ''"></a>
+                                <a (click)="toggleSocialMediaType('medium')"><img
+                                        src="../../../assets/img/icons/icons8-medium.svg"
+                                        [ngClass]="socialMediaType === 'medium' ? 'social-media-active' : ''"></a>
                             </div>
                         </div>
                         <div class="action-btn">
-                            <button id="submit" class="default-btn" type="submit">Generate</button>
+                            <button id="submit" class="default-btn" type="submit"
+                                [disabled]="featureForm.invalid">Generate</button>
                         </div>
                     </div>
                     <div id="form-messages" class="alert" role="alert"></div>
-                </form>
+                </div>
             </div>
-        </div>
+        </form>
+    </div>
+
+    <!-- Loading GIF displayed conditionally -->
+    <div *ngIf="isLoading" class="loading-area">
+        <img src="../../../assets/gif/loading.gif" alt="Loading..." />
+    </div>
+
+    <!-- Render OutputComponent on success -->
+    <div *ngIf="articles.length > 0" class="padding">
+        <app-output [articles]="articles"></app-output>
+    </div>
+
+    <div *ngIf="hasError" class="error-message">
+        An error occurred while generating content. Please try again.
     </div>
 </section><!-- /.feature-section-->

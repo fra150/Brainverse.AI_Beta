@@ -59,7 +59,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
     cursor: pointer;
-    background: #212529;
+    background: #2550de;
 }
 
 ::selection {
@@ -1070,16 +1070,16 @@ ul.nav>li>a.active {
     padding-bottom: 80px;
 }
 
-.section-heading {}
+
 
 .feature-wrap .col-lg-3 {
     /* display: flex; */
 }
 
 .feature-item {
-    background-color: #f9fafa;
+    background-color: #D8125B;
     padding: 20px;
-    /* border-radius: 10px;     */
+    border-radius: 10px;    
     display: flex;
     flex-direction: column;
     /* Ensures all cards have the same height */
@@ -1093,10 +1093,17 @@ ul.nav>li>a.active {
 }
 
 .feature-item:hover {
-    /* border: 2px dashed #2550de; */
+    border: 3px solid #212529;
     box-shadow: 0.5px 0.5px 5px 0.5px #c1d2d2;
     cursor: pointer;
 }
+
+.feature-item-active {
+    border: 3px solid #212529;
+    box-shadow: 0.5px 0.5px 5px 0.5px #c1d2d2;
+    cursor: pointer;
+}
+
 
 .feature-item i {
     font-size: 40px;
@@ -1106,15 +1113,17 @@ ul.nav>li>a.active {
 }
 
 .feature-item h3 {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 15px;
+    color: #f9fafa;
 }
 
 .feature-item p {
     flex-grow: 1;
     /* Allows the paragraph to take up available space */
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 16px;
+    color: #f9f9f9;
 }
 
 .feature-item .read-more {
@@ -1126,6 +1135,10 @@ ul.nav>li>a.active {
     position: relative;
     /* padding-left: 15px; */
     text-decoration: none;
+}
+
+.feature-item-card {
+    cursor: pointer;
 }
 
 /* .feature-item .read-more::before {
@@ -1311,7 +1324,7 @@ ul.nav>li>a.active {
 
 .counter-wrap {}
 
-.section-heading {}
+
 
 .section-heading h2 {
     margin-bottom: 20px;
@@ -1351,6 +1364,14 @@ ul.nav>li>a.active {
 .social-media-icon img{
     width: 40px;
     height: 40px;
+}
+
+.social-media-icon a{
+    cursor: pointer;
+}
+
+.social-media-active {
+    border: 2px solid black;
 }
 
 .counter-content {}
@@ -1497,7 +1518,7 @@ ul.nav>li>a.active {
     align-items: center;
 }
 
-.section-heading {}
+
 
 .pricing-box {
     background-color: #fff;
@@ -2041,7 +2062,7 @@ button {
    ========================================================================== */
 .testimonial-section {}
 
-.section-heading {}
+
 
 .section-heading span {}
 
@@ -3445,3 +3466,13 @@ blockquote span {
     margin-bottom: 20px;
     font-size: 14px;
 }
+
+.loading-area {
+    margin-top: 10px; /* Add spacing between the button and GIF */
+    text-align: center;
+  }
+  
+  .loading-area img {
+    width: 150px; /* Adjust size of the loading GIF */
+    height: 150px;
+  }
