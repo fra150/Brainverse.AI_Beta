@@ -1,0 +1,17 @@
+<div class="container">
+    <div *ngFor="let article of articles" class="article">
+      <h3>{{ article.contentMetadata.title }}</h3>
+      <p>{{ article.contentMetadata.description }}</p>
+      <div *ngIf="article.contentType === 'text' || article.contentType === 'meme'">
+        <p>{{ article.contentMetadata.summary }}</p>
+      </div>
+      <div *ngIf="article.contentType === 'image'">
+        <img [src]="article.contentMetadata.url" [alt]="article.contentMetadata.title" />
+      </div>
+      <div *ngIf="article.contentType === 'video'">
+        <video controls>
+          <source [src]="article.contentMetadata.url" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
