@@ -273,8 +273,6 @@ def debug_endpoint(data: PromptInput):
 ```
 
 
-Certo! Ecco la traduzione del testo:
-
 ---
 
 # Detailed Guide for Structuring the Prompt
